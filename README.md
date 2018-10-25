@@ -4,8 +4,10 @@
 
 
 
-Este es un script que te muestra un formulario con dos campos el primero campo es "nombre" en el cual debe de introducir un nombre y el segundo es el campo "apellido" en el cual debe de introducir el primer apellido.
+Este es un script que te muestra un formulario con dos campos, el primero campo es "nombre" en el cual debe de introducir un nombre y el segundo es el campo "apellido" en el cual debe de introducir el primer apellido.
+
 Advertencia!!!
+
 El campo apellido solo debe de contener el primer apellido.
 
 # Dependecias
@@ -16,7 +18,7 @@ El campo apellido solo debe de contener el primer apellido.
 
 ### Instalación
 
-El fichero hello_user_redis.pl se debe de guarda en /usr/lib/cgi-bin/ con permiso de ejecución
+El fichero hello_user_redis.pl se debe de guarda en /usr/lib/cgi-bin/ con permiso de ejecución.
 
 Para instalar Redis primero debemos de instalar built-essential.
 
