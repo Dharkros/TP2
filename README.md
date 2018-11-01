@@ -12,6 +12,7 @@ El campo apellido solo debe de contener el primer apellido.
 
 # Dependecias
 
+  - Instalacion de apache2 + modulo CGI.
   - Instalacion de built-essential.
   - Instalacion de git.
   - Instalacion de [Redis](https://github.com/antirez/redis).
@@ -20,6 +21,11 @@ El campo apellido solo debe de contener el primer apellido.
 
 El fichero hello_user_redis.pl se debe de guarda en /usr/lib/cgi-bin/ con permiso de ejecución.
 
+Instalamos apache2 y activamos el modulo CGI para tener el servicio web
+
+```sh
+$ sudo apt-get install apache2
+```
 Para instalar Redis primero debemos de instalar built-essential.
 
 ```sh
