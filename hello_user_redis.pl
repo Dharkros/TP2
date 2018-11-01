@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 print "Content-Type: text/html\n\n";
 
+#Link a GITHUB: https://github.com/Dharkros/hello_user_redis.pl/blob/master/hello_user_redis.pl
+
 use Redis; #uso de la herramienta redis
 $redis = new Redis;
 
@@ -17,6 +19,11 @@ sub cortar {
                  $value =~ s/%(..)/pack("C", hex($1))/eg;
                  $FORM{$name} = $value;
                 }
+
+}
+ 
+ sub form1 {
+                
                 #-------------------------------------------#
                 # Asignacion de datos en la base de datos   #
                 #-------------------------------------------#
@@ -27,9 +34,25 @@ sub cortar {
                 #---------------------------------------------------------------------#
                 $nombre=$redis->get('nombre');
                 $apellido=$redis->get('apellido');
+}  
+
+ sub form2 {
+                
+                #-------------------------------------------#
+                # Asignacion de datos en la base de datos   #
+                #-------------------------------------------#
+                $redis -> set  ('telefono' => $FORM{telefono});
+                $redis -> set  ('correo' => $FORM{correo});
+                $redis -> set  ('direccion' => $FORM{direccion});
+                #---------------------------------------------------------------------#
+                # Variables que almacena el resultado optenido de la base de datos    #
+                #---------------------------------------------------------------------#
+                $telefono=$redis->get('telefono');
+                $correo=$redis->get('correo');
+                $direccion=$redis->get('direccion');
+}             
 
 
-}
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 # Condicion que valora si el $ENV{'QUERY_STRING'} es nulo, sí esta condicion se cumple ejecuta el bloque y muestra un formulario   #
@@ -52,8 +75,25 @@ if($ENV{'QUERY_STRING'} eq "") {
 
 if($ENV{'QUERY_STRING'} ne "") {
   &cortar;
- 
-  print "<h3>Hola $nombre $apellido</h3>";
+  &form1;
+  
+    print "<h3>Hola $nombre $apellido complete el siguiente formulario</h3> \n";
+    
+        print "<FORM name=\"Enviar1\" method = \"GET\">";
+        print "Telefono:  <input type = \"text\" name = \"telefono\">  <br>";
+        print "Correo: <input type = \"text\" name = \"correo\">  <br>";
+        print "Direccion: <input type = \"text\" name = \"direccion\">";
+    
+        print "<input type=\"submit\" value=\"Enviar\">";
+    
+        print "</FORM>";
+        
+    &cortar;
+    &form2;
+
+    if ($correo ne "" || $direccion ne "" || $telefono ne "") {
+   
+       print "<h3>Ya sabemos que su telefono es $telefono su direcion es $direccion y su correo es $correo, Gracias </h3> \n";
+       
+    }
 }
-
-
