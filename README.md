@@ -4,11 +4,7 @@
 
 
 
-Este es un script que te muestra un formulario con dos campos, el primero campo es "nombre" en el cual debe de introducir un nombre y el segundo es el campo "apellido" en el cual debe de introducir el primer apellido.
-
-Advertencia!!!
-
-El campo apellido solo debe de contener el primer apellido.
+Este es un script que te muestra un formulario con dos campos, el primero campo es "usuario" en el cual debe de introducir un usuario y el segundo es el campo "contraseña". Luego se muestra un segundo formulario el cual recibe datos sobre el usuario.
 
 # Dependecias
 
