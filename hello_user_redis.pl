@@ -1,7 +1,6 @@
 #!/usr/bin/perl
-print "Content-Type: text/html\n\n";
 
-#Link a GITHUB: https://github.com/Dharkros/hello_user_redis.pl/blob/master/hello_user_redis.pl
+print "Content-Type: text/html; charset=utf-8 \n\n";
 
 #============================================================================================================================================#
 # NUEVA VERSION LA ANTIGUA ESTA DEBAJO DE ESTE CODIGO (EL ANTIGUO NO FUNCIONA (NO SE PORQUE NO FUNCIONA EL RESULTADO DEL SEGUNDO FORMULARIO) #
