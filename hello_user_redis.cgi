@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 
-
-use utf8; #Soluciona problemas de acentos
+#use utf8; #Soluciona problemas de acentos
 use CGI; #Usa modulo CGI
 $query = new CGI;
 use Redis; #uso de la herramienta redis
@@ -15,7 +14,7 @@ $redis = new Redis;
 # NUEVA VERSION LA ANTIGUA ESTA DEBAJO DE ESTE CODIGO (EL ANTIGUO NO FUNCIONA (NO SE PORQUE NO FUNCIONA EL RESULTADO DEL SEGUNDO FORMULARIO) #
 #============================================================================================================================================# 
 
-print $query->header;
+print $query->header("text/html;charset=UTF-8");
 print $query->start_html('hello_user_redis');
 
 
