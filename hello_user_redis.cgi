@@ -15,6 +15,7 @@ $redis = new Redis;
 #============================================================================================================================================# 
 
 print $query->header("text/html;charset=UTF-8");
+#print $query->header(-type=>'UTF-8');
 print $query->start_html('hello_user_redis');
 
 
