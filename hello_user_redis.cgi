@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
 
-
-use CGI;
+use utf8; #Soluciona problemas de acentos
+use CGI; #Usa modulo CGI
 $query = new CGI;
 use Redis; #uso de la herramienta redis
 $redis = new Redis;
