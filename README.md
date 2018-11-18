@@ -1,4 +1,4 @@
-# LOGIN.{PL,CGI}
+# LOGIN_REDIS.{PL,CGI}
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
