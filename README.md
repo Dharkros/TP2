@@ -53,5 +53,5 @@ $ ./redis-server ../redis.conf
 
 ```
 
-### Desarrollador
+### Desarrollador Por:
 - Santiago Amo Quintero
